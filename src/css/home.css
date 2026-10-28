@@ -1,0 +1,678 @@
+
+/* ========================================
+   AQUARIUS CABAÑAS - HOME
+======================================== */
+
+.aquarius-home {
+  --aq-green: #244b3b;
+  --aq-green-dark: #173629;
+  --aq-sand: #f6f3ec;
+  --aq-gold: #d4b47b;
+  --aq-text: #343b35;
+
+  width: 100%;
+  overflow: hidden;
+  color: var(--aq-text);
+  background: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.aquarius-home * {
+  box-sizing: border-box;
+}
+
+.aquarius-home a {
+  text-decoration: none;
+}
+
+.aquarius-home p {
+  line-height: 1.8;
+}
+
+/* PORTADA */
+
+.aquarius-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 690px;
+  min-height: min(760px, 100svh);
+  color: #fff;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(13, 35, 26, 0.83) 0%,
+      rgba(13, 35, 26, 0.48) 55%,
+      rgba(13, 35, 26, 0.12) 100%
+    ),
+    /* url("https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8") */
+
+  url("/src/assets/aquarius-pileta.jpeg")
+
+    center 55% / cover no-repeat;
+}
+
+.aquarius-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(12, 31, 23, 0.35),
+    transparent 45%
+  );
+  pointer-events: none;
+}
+
+.aquarius-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 26px 42px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.aquarius-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: 3px;
+  line-height: 1.1;
+}
+
+.aquarius-logo-icon {
+  color: var(--aq-gold);
+  font-size: 34px;
+}
+
+.aquarius-logo small {
+  display: block;
+  margin-top: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 6px;
+}
+
+.aquarius-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.aquarius-nav a,
+.aquarius-header-button {
+  color: #fff;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.aquarius-logo-img {
+  display: block;
+  width: 145px;
+  height: auto;
+  object-fit: contain;
+}
+.aquarius-nav a:hover {
+  color: var(--aq-gold);
+}
+
+.aquarius-header-button {
+  padding: 12px 21px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
+}
+
+.aquarius-header-button:hover {
+  color: var(--aq-green-dark);
+  background: #fff;
+}
+
+.aquarius-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1320px;
+  margin: auto;
+  padding: 75px 42px 100px;
+}
+
+.aquarius-eyebrow,
+.aquarius-section-label {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--aq-gold);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 3px;
+  line-height: 1.7;
+}
+
+.aquarius-hero h1 {
+  max-width: 850px;
+  margin: 0 0 25px;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 5.4vw, 70px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.aquarius-hero h1 span {
+  color: #e4d2ad;
+  font-style: italic;
+}
+
+.aquarius-hero-content > p {
+  max-width: 570px;
+  margin: 0 0 32px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+}
+
+.aquarius-hero-actions,
+.aquarius-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 13px;
+}
+
+.aquarius-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 49px;
+  padding: 14px 23px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 650;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.aquarius-button:hover {
+  transform: translateY(-2px);
+}
+
+.aquarius-button-primary {
+  color: #fff;
+  background: var(--aq-green);
+}
+
+.aquarius-button-primary:hover {
+  color: #fff;
+  background: #315e49;
+}
+
+.aquarius-button-outline {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.65);
+  background: transparent;
+}
+
+.aquarius-button-outline:hover {
+  color: var(--aq-green-dark);
+  background: #fff;
+}
+
+.aquarius-scroll {
+  position: absolute;
+  right: 42px;
+  bottom: 25px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* PRESENTACIÓN */
+
+.aquarius-intro {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 100px 28px 95px;
+  text-align: center;
+}
+
+.aquarius-intro .aquarius-section-label,
+.aquarius-section-heading .aquarius-section-label {
+  color: #8c7956;
+}
+
+.aquarius-intro h2,
+.aquarius-section-heading h2,
+.aquarius-cta h2 {
+  margin: 0 0 23px;
+  color: var(--aq-green-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 4vw, 47px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.aquarius-intro h2 span {
+  color: #7d8e7c;
+  font-style: italic;
+}
+
+.aquarius-intro > p {
+  max-width: 670px;
+  margin: 0 auto;
+  color: #6c716c;
+  font-size: 15px;
+}
+
+/* BENEFICIOS */
+
+.aquarius-benefits {
+  padding: 85px 42px 100px;
+  background: var(--aq-sand);
+}
+
+.aquarius-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto 42px;
+}
+
+.aquarius-section-heading h2 {
+  margin-bottom: 0;
+}
+
+.aquarius-section-heading > p {
+  max-width: 390px;
+  margin: 0;
+  color: #70756f;
+  font-size: 14px;
+}
+
+.aquarius-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.aquarius-benefit-card {
+  min-width: 0;
+  padding: 32px 25px;
+  border: 1px solid #e8e4db;
+  border-radius: 6px;
+  background: #fff;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.aquarius-benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(38, 56, 43, 0.08);
+}
+
+.aquarius-benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  background: #f0eee5;
+  font-size: 25px;
+}
+
+.aquarius-benefit-card h3 {
+  margin: 0 0 13px;
+  color: var(--aq-green-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.aquarius-benefit-card p {
+  margin: 0;
+  color: #70756f;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* GALERÍA */
+
+.aquarius-gallery {
+  padding: 100px 42px;
+}
+
+.aquarius-instagram-link {
+  padding-bottom: 8px;
+  color: var(--aq-green);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.aquarius-instagram-link:hover {
+  color: #8c7956;
+}
+
+.aquarius-gallery-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.aquarius-gallery-item {
+  position: relative;
+  display: flex;
+  align-items: end;
+  min-width: 0;
+  min-height: 330px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #d9dfd4;
+  background-position: center;
+  background-size: cover;
+  transition: background-size 0.3s ease;
+}
+
+.aquarius-gallery-item::before {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(14, 32, 23, 0.78),
+    transparent 70%
+  );
+  content: "";
+  transition: background-color 0.2s ease;
+}
+
+.aquarius-gallery-item:hover::before {
+  background-color: rgba(14, 32, 23, 0.12);
+}
+
+.aquarius-gallery-caption {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  color: #fff;
+}
+
+.aquarius-gallery-caption h3 {
+  margin: 0 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.aquarius-gallery-caption span {
+  font-size: 12px;
+}
+
+/* LLAMADA A LA ACCIÓN */
+
+.aquarius-cta {
+  position: relative;
+  padding: 95px 30px;
+  color: #fff;
+ background:
+    linear-gradient(
+      90deg,
+      rgba(13, 35, 26, 0.43) 0%,
+      rgba(13, 35, 26, 0.48) 55%,
+      rgba(13, 35, 26, 0.12) 100%
+    ),
+    /* url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e") */
+
+      url("/src/assets/aquarius-cabanias_6.jpeg")
+
+    center / cover no-repeat;
+  text-align: center;
+}
+
+.aquarius-cta-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.aquarius-cta h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: clamp(42px, 5vw, 60px);
+}
+
+.aquarius-cta-content > p {
+  max-width: 540px;
+  margin: 0 auto 30px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+}
+
+.aquarius-cta-actions {
+  justify-content: center;
+}
+
+.aquarius-button-light {
+  color: var(--aq-green-dark);
+  background: #fff;
+}
+
+.aquarius-button-light:hover {
+  color: var(--aq-green-dark);
+  background: #f0eee5;
+}
+
+/* FOOTER */
+
+.aquarius-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 32px 42px;
+  background: #142e23;
+}
+
+.aquarius-footer-logo {
+  font-size: 17px;
+}
+
+.aquarius-footer-logo .aquarius-logo-icon {
+  font-size: 28px;
+}
+
+.aquarius-footer p {
+  margin: 0;
+  color: #d1d9d1;
+  font-size: 12px;
+}
+
+.aquarius-footer > a:not(.aquarius-logo) {
+  color: #e4d2ad;
+  font-size: 13px;
+}
+
+.aquarius-copyright {
+  color: #b5c0b7;
+  font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .aquarius-benefit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .aquarius-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .aquarius-gallery-item:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .aquarius-section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .aquarius-hero {
+    min-height: 720px;
+    min-height: min(820px, 100svh);
+    background-position: 57% center;
+  }
+
+  .aquarius-header {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .aquarius-logo {
+    font-size: 17px;
+  }
+
+  .aquarius-logo-icon {
+    font-size: 29px;
+  }
+
+  .aquarius-logo small {
+    font-size: 9px;
+  }
+
+  .aquarius-nav {
+    order: 3;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .aquarius-nav a {
+    font-size: 12px;
+  }
+
+  .aquarius-header-button {
+    padding: 10px 13px;
+    font-size: 12px;
+  }
+
+  .aquarius-hero-content {
+    margin: auto 0;
+    padding: 65px 23px 90px;
+  }
+
+  .aquarius-hero h1 {
+    font-size: clamp(36px, 9vw, 52px);
+    letter-spacing: -0.7px;
+  }
+
+  .aquarius-hero-content > p {
+    font-size: 14px;
+  }
+
+  .aquarius-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .aquarius-button {
+    width: 100%;
+  }
+
+  .aquarius-scroll {
+    right: 22px;
+    bottom: 18px;
+  }
+
+  .aquarius-intro {
+    padding: 75px 23px;
+  }
+
+  .aquarius-benefits,
+  .aquarius-gallery {
+    padding: 70px 20px;
+  }
+
+  .aquarius-section-heading h2,
+  .aquarius-intro h2 {
+    font-size: 34px;
+  }
+
+  .aquarius-benefit-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .aquarius-benefit-card {
+    padding: 25px;
+  }
+
+  .aquarius-benefit-icon {
+    margin-bottom: 16px;
+  }
+
+  .aquarius-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .aquarius-gallery-item,
+  .aquarius-gallery-item:first-child {
+    grid-column: auto;
+    min-height: 280px;
+  }
+
+  .aquarius-cta {
+    padding: 75px 23px;
+  }
+
+  .aquarius-cta-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .aquarius-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 23px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aquarius-home *,
+  .aquarius-home *::before,
+  .aquarius-home *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
