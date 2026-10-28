@@ -137,6 +137,64 @@ const Home = () => {
         </a>
       </section>
 
+
+{/* UBICACIÓN */}
+<section className="aquarius-location" id="ubicacion">
+  <div className="aquarius-location-container">
+    <div className="aquarius-location-info">
+      <span className="aquarius-section-label">
+        VENÍ A CONOCERNOS
+      </span>
+
+      <h2>
+        Tu próximo descanso
+        <br />
+        <span>está más cerca.</span>
+      </h2>
+
+      <p>
+        Descubrí Aquarius Cabañas Boutique y empezá a
+        planificar tu próxima escapada. Consultá la ubicación
+        y encontrá el mejor camino para llegar.
+      </p>
+
+      <div className="aquarius-location-detail">
+        <span className="aquarius-location-icon">⌖</span>
+        <div>
+          <strong>¿Cómo llegar?</strong>
+          <p>
+            Consultá nuestra ubicación y obtené indicaciones
+            directamente desde Google Maps.
+          </p>
+        </div>
+      </div>
+
+      <a
+        className="aquarius-button aquarius-button-primary"
+        href="https://maps.app.goo.gl/PQAS1Ym3eF9MkeJs7"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Cómo llegar <span>↗</span>
+      </a>
+    </div>
+
+    <div className="aquarius-location-map">
+      <iframe
+        title="Ubicación de Aquarius Cabañas Boutique en Google Maps"
+        src="https://maps.google.com/maps?q=Aquarius%20Caba%C3%B1as%20Carpinter%C3%ADa%20San%20Luis&t=&z=14&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+    </div>
+  </div>
+</section>
+
+
       {/* PRESENTACIÓN */}
       <section className="aquarius-intro">
         <span className="aquarius-section-label">
@@ -272,12 +330,12 @@ const Home = () => {
       {/* FOOTER */}
       <footer className="aquarius-footer">
         <a className="aquarius-logo" href="#inicio">
-  <img
-    src={logoAquarius}
-    alt="Aquarius Cabañas Boutique"
-    className="aquarius-logo-img"
-  />
-</a>
+          <img
+            src={logoAquarius}
+            alt="Aquarius Cabañas Boutique"
+            className="aquarius-logo-img"
+          />
+        </a>
 
         <p>Tu espacio para descansar y disfrutar.</p>
 
@@ -291,6 +349,11 @@ const Home = () => {
 
         <span className="aquarius-copyright">
           © {new Date().getFullYear()} Aquarius Cabañas
+        </span>
+        
+        <div>  </div>
+        <span className="aquarius-copyright">
+         Desarrollado por: +54 9 3516557517
         </span>
       </footer>
     </main>
