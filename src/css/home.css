@@ -612,6 +612,92 @@
   display: block;
 }
 
+.aquarius-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.aquarius-contact-link svg {
+  font-size: 20px;
+}
+
+.aquarius-contact-link:hover {
+  opacity: 0.75;
+}
+
+.feriados-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.feriados-container .deporte-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 14px;
+  background: #f5f8f6;
+  border: 1px solid #e0e9e2;
+}
+
+.feriados-container .deporte-info h3 {
+  color: #176044;
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.feriados-container .deporte-info h4 {
+  color: #044f82;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.feriados-container .deporte-info p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.feriados-container .deporte-info span {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin: 8px 0 15px;
+}
+
+.feriados-container .deporte-info a {
+  display: inline-block;
+  color: #fff;
+  background: #176044;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: auto;
+}
+
+.feriados-footer {
+  text-align: center;
+  margin-top: 25px;
+  color: #176044;
+}
+
+.feriados-footer h3 {
+  font-size: 21px;
+}
+
+@media (max-width: 600px) {
+  .feriados-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* UBICACIÓN RESPONSIVE */
 
 @media (max-width: 900px) {
