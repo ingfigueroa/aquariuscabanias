@@ -418,29 +418,41 @@ useEffect(() => {
       onHide={() => setMostrarModal(false)}
       centered
     >
-  <Modal.Header closeButton>
-    <a className="aquarius-logo" href="#inicio">
-  <img
-    src="logo-fondo-negro.png"
-    alt="Aquarius Cabañas Boutique"
-    className="aquarius-logo-img"
-  />
-</a>
-    
-  </Modal.Header>
+ <Modal.Header closeButton style={{ position: "relative" }}>
+  <a className="aquarius-logo" href="#inicio">
+    <img
+      src="logo-fondo-negro.png"
+      alt="Aquarius Cabañas Boutique"
+      className="aquarius-logo-img"
+      style={{ height: "50px", width: "50px" }}
+    />
+  </a>
+
+  <Modal.Title
+    style={{
+      position: "absolute",
+      left: "50%",
+      transform: "translateX(-50%)",
+      margin: 0,
+      whiteSpace: "nowrap"
+    }}
+  >
+    TE ESPERAMOS
+  </Modal.Title>
+</Modal.Header>
 
 <Modal.Body>
   <div className="espiritu-olimpico">
     
    
 
-    <h2 style={{textAlign: "center"}}>¡Noviembre viene con fines de semana largos!</h2>
-     <h4 style={{textAlign: "center"}}>TE ESPERAMOS</h4>
+    <h5 style={{textAlign: "center"}}>¡Noviembre viene con fines de semana largos!</h5>
+     {/* <h4 style={{textAlign: "center"}}>TE ESPERAMOS</h4>
 
     <p>
       Aprovechá estos días para descansar, disfrutar de la pileta
       y desconectarte de la rutina.
-    </p>
+    </p> */}
 
     <hr />
   </div>
@@ -494,11 +506,11 @@ useEffect(() => {
     </article>
 
   </div>
-
+{/* 
   <div className="feriados-footer">
     <h3>¡Te esperamos en Aquarius Cabañas!</h3>
     <p>Tu próximo descanso está más cerca de lo que pensás.</p>
-  </div>
+  </div> */}
 
 </Modal.Body>
 
